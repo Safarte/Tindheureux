@@ -1,15 +1,17 @@
-Brice04 - PonsletV | 58.9 % compatibles
-Balbrak - Ringil | 53.9 % compatibles
-captainrainb0w - TocTocMcFly  | 65.6 % compatibles
-Ouiouisenpai - coucoudu28 | 56.1 % compatibles
-Redarkyan - alexballoon | 63.3 % compatibles
-Bibuss - Zoricus | 51.7 % compatibles
-Wolpertinger - Noot_Noot | 58.3 % compatibles
-ozymandiasse - Lacaf | 52.2 % compatibles
-Samoht G - Manderesse | 61.1 % compatibles
-Eszik3 - Westornd | 65.0 % compatibles
-Victoto - Rackhaml | 57.8 % compatibles
-Lordh - slf_vr | 50.6 % compatibles
-CathWg - LoikLak | 65.0 % compatibles
-alexfire008  - Ozonek | 50.6 % compatibles
-Mihooo - DarkRevan | 40.0 % compatibles
+Brice04 - PonsletV | 66.3 % compatibles
+Balbrak - Lordh | 62.4 % compatibles
+captainrainb0w - Leshran | 87.5 % compatibles
+Ouiouisenpai - coucoudu28 | 65.5 % compatibles
+Redarkyan - alexballoon | 79.6 % compatibles
+Bibuss - Manderesse | 77.3 % compatibles
+Wolpertinger - Noot_Noot | 65.5 % compatibles
+ozymandiasse - Lacaf | 63.9 % compatibles
+Samoht G - sehyod | 64.7 % compatibles
+Eszik3 - Westornd | 83.5 % compatibles
+slf_vr - Rackhaml | 58.4 % compatibles
+LoikLak - CathWg | 83.5 % compatibles
+alexfire008  - Ozonek | 54.5 % compatibles
+Zoricus - Edsheebran | 45.1 % compatibles
+Mihooo - Majora | 67.8 % compatibles
+Ringil - DarkRevan  | 44.3 % compatibles
+Hai hai ! - SexAlpagua | 9.0 % compatibles

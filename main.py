@@ -52,7 +52,7 @@ def rel_type(user1, user2):
     res = 30
     for value in user1[2]:
         if value in user2[2]:
-            res -= 10
+            res -= 15
     return res
 
 def talk(user1, user2):
@@ -64,7 +64,7 @@ def trait(user1, user2):
     res = 0
     for i in [5, 6, 7, 8, 10, 11, 13, 15, 16, 17]:
         d = abs(user1[i] - user2[i])
-        res += d
+        res += 2 * d
     return res
 
 def food(user1, user2):
@@ -117,12 +117,12 @@ def compatibility_matrix(users, responses):
             user2 = responses[users[j]]
             comp_matrix[i, j] = compatibility(user1, user2)
             comp_matrix[j, i] = comp_matrix[i, j]
-    return comp_matrix
+    return np.clip(comp_matrix * 2 - 80, 0, 255)
 
 
 def show_matrix():
     users, responses = load_responses()
-    comp_matrix = (180 - compatibility_matrix(users, responses)) / 180 * 100
+    comp_matrix = (255 - compatibility_matrix(users, responses)) / 255 * 100
 
     plt.imshow(comp_matrix, cmap='inferno', vmin=0, vmax=100)
     plt.xticks(list(range(len(users))), users, rotation='vertical')
@@ -164,7 +164,7 @@ def sort_matches(matches_list):
     return res
 
 
-def matches_hungarian():
+def matches():
     users, responses = load_responses()
     comp_matrix = compatibility_matrix(users, responses)
     row_ind, col_ind = linear_sum_assignment(comp_matrix)
@@ -173,7 +173,7 @@ def matches_hungarian():
         for k in range(len(row_ind)):
             i = row_ind[k]
             j = col_ind[k]
-            comp = (180 - comp_matrix[i, j]) / 180 * 100
+            comp = (255 - comp_matrix[i, j]) / 255 * 100
             matches_list.append(((i,j),comp))
         chosen_indexes = []
         res = ''
@@ -186,5 +186,4 @@ def matches_hungarian():
                 res += '{} - {} | {} % compatibles\n'.format(users[i], users[j], comp)
         file.write(res)
 
-matches_hungarian()
-show_matrix()
+matches()
