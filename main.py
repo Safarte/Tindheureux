@@ -172,4 +172,4 @@ def matches():
                 res += '{} - {} | {} % compatibles\n'.format(users[i], users[j], comp)
         file.write(res)
 
-most_compatible()
+matches()

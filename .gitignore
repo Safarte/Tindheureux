@@ -1,4 +1,4 @@
 .cache/
 .vscode/
-*.csv
-*.txt
+**.csv
+**.txt
