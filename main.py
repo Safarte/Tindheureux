@@ -139,29 +139,15 @@ def most_compatible():
     with open('most_compatible.txt', 'w') as file:
         res = ''
         for i in range(n):
-            m = 200
+            m = float('inf')
             index = -1
             for j in range(n):
                 if j != i and comp_matrix[i, j] < m:
                     m = comp_matrix[i, j]
                     index = j
-            res += '{} - {}\n'.format(users[i], users[index])
+            comp = round((255 - comp_matrix[i, index]) / 255 * 100, 1)
+            res += '{} - {} : {}%\n'.format(users[i], users[index], comp)
         file.write(res)
-
-
-def sort_matches(matches_list):
-    n = len(matches_list)
-    res = np.empty(n)
-    for i in range(n):
-        m = 0
-        index = i
-        for j in range(n):
-            if matches_list[j][1] > m:
-                m = matches_list[j][1]
-                index = j
-        res[i] = matches_list[index]
-        matches_list[index] = ((-1,-1),-1)
-    return res
 
 
 def matches():
@@ -186,4 +172,4 @@ def matches():
                 res += '{} - {} | {} % compatibles\n'.format(users[i], users[j], comp)
         file.write(res)
 
-matches()
+most_compatible()
